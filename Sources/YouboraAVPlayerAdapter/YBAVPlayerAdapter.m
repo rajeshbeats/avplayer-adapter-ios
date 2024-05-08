@@ -333,11 +333,15 @@ bool firstSeek;
                         error = player.currentItem.error;
                     }
                     
-                    if ([self.fatalErrors containsObject:[NSNumber numberWithInteger:error.code]]) {
-                        [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
-                    } else {
-                        [self sendError:error];
-                    }
+                    /*
+                     Commenting below error reporting as part of Adapter to do custom handle on client side.
+                     *
+                     */
+//                    if ([self.fatalErrors containsObject:[NSNumber numberWithInteger:error.code]]) {
+//                        [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
+//                    } else {
+//                        [self sendError:error];
+//                    }
                 }
             }
         }
