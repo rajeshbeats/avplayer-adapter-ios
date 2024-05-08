@@ -416,7 +416,8 @@ bool firstSeek;
         AVPlayer * player = self.player;
         if (notification.object == player.currentItem) {
             NSError * error = notification.userInfo[AVPlayerItemFailedToPlayToEndTimeErrorKey];
-            [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
+            // Disable error reporting for handling on app side.
+//            [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
         }
     } @catch (NSException *exception) {
         [YBLog logException:exception];
