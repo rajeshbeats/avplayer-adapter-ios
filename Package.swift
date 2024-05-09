@@ -16,7 +16,7 @@ let package = Package(
             targets: ["YouboraAVPlayerAdapter"]),
     ],
     dependencies: [
-        .package(url: "https://bitbucket.org/npaw/lib-plugin-spm-ios.git", .upToNextMajor(from: "6.7.2"))
+        .package(url: "https://bitbucket.org/npaw/lib-plugin-spm-ios.git", .upToNextMajor(from: "6.7.1"))
     ],
     targets: [
         .target(name: "YouboraAVPlayerAdapter",
